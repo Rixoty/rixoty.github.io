@@ -12,18 +12,15 @@
             margin: 0;
             padding: 0;
             color: #424242;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-        .content {
-            flex: 1;
         }
         .nav {
             background-color: #37474f;
             color: white;
             padding: 15px 10%;
             text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
         .nav a {
             font-family: 'Montserrat', sans-serif;
@@ -35,17 +32,13 @@
         .nav a:hover {
             color: #ff7043;
         }
-        .hero {
-            background-color: #1de9b6;
+        .hero, .section {
             padding: 50px 10%;
             text-align: center;
             color: #424242;
         }
-        .hero h1 {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 700;
-            font-size: 24px;
-            margin: 0 0 20px;
+        .hero {
+            background-color: #1de9b6;
         }
         .cta {
             background-color: #ff7043;
@@ -56,13 +49,17 @@
             font-weight: 700;
             border-radius: 5px;
         }
+        .section {
+            background-color: #f0f0f0;
+            margin: 20px 0;
+        }
         .services {
             display: flex;
             justify-content: space-around;
-            margin: 40px 10%;
-            padding: 20px;
+            padding: 20px 10%;
             background-color: #cfd8dc;
             border-radius: 5px;
+            margin: 20px 0;
         }
         .service {
             text-align: center;
@@ -76,7 +73,7 @@
             border-radius: 50%;
         }
         .testimonial {
-            margin: 40px 10%;
+            margin: 20px 10%;
             padding: 20px;
             background-color: #cfd8dc;
             border-radius: 5px;
@@ -88,7 +85,6 @@
             padding: 20px 10%;
             text-align: center;
             font-size: 14px;
-            margin-top: auto;
         }
         .footer a {
             font-family: 'Montserrat', sans-serif;
@@ -97,60 +93,57 @@
             text-decoration: none;
             margin: 0 10px;
         }
-        .lorem-content {
-            margin: 20px 10%;
-            line-height: 1.6;
-        }
     </style>
 </head>
 <body>
 
-    <div class="content">
-        <div class="nav">
-            <a href="#">Home</a>
-            <a href="#">Over Ons</a>
-            <a href="#">Diensten</a>
-            <a href="#">Portfolio</a>
-            <a href="#">Referenties</a>
-            <a href="#">Contact</a>
-        </div>
+    <div class="nav">
+        <a href="#home">Home</a>
+        <a href="#over-ons">Over Ons</a>
+        <a href="#diensten">Diensten</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#referenties">Referenties</a>
+        <a href="#contact">Contact</a>
+    </div>
 
-        <div class="hero">
-            <h1>Welkom bij Onze Cybersecurity Consultancy</h1>
-            <a href="#" class="cta">Neem Contact Op</a>
-        </div>
+    <div id="home" class="hero">
+        <h1>Welkom bij Onze Cybersecurity Consultancy</h1>
+        <a href="#contact" class="cta">Neem Contact Op</a>
+    </div>
 
-        <div class="lorem-content">
-            <h2>Onze Diensten</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa.</p>
-            <p>Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor.</p>
-            <p>Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh.</p>
-        </div>
+    <div id="over-ons" class="section">
+        <h2>Over Ons</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet.</p>
+    </div>
 
-        <div class="services">
-            <div class="service">
-                <div class="service-icon"></div>
-                <h2>Strategisch Consultancy</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
-            <div class="service">
-                <div class="service-icon"></div>
-                <h2>Security Awareness</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
-            <div class="service">
-                <div class="service-icon"></div>
-                <h2>Architectuur & Verandering</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
+    <div id="diensten" class="services">
+        <div class="service">
+            <div class="service-icon"></div>
+            <h2>Strategisch Consultancy</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </div>
-
-        <div class="testimonial">
-            <p>'Uitstekende service en expertise!'</p>
+        <div class="service">
+            <div class="service-icon"></div>
+            <h2>Security Awareness</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="service">
+            <div class="service-icon"></div>
+            <h2>Architectuur & Verandering</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </div>
     </div>
 
-    <div class="footer">
+    <div id="portfolio" class="section">
+        <h2>Portfolio</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum lacinia arcu eget nulla. Curabitur sodales ligula in libero.</p>
+    </div>
+
+    <div id="referenties" class="testimonial">
+        <p>'Uitstekende service en expertise!'</p>
+    </div>
+
+    <div id="contact" class="footer">
         <p>Contact: info@jouwdomein.nl | Tel: +31 123 456 789</p>
         <p>Volg ons: <a href="#">LinkedIn</a> | <a href="#">Twitter</a></p>
         <p>© 2024 Jouw Bedrijf - Alle rechten voorbehouden</p>
