@@ -12,6 +12,12 @@
             margin: 0;
             padding: 0;
             color: #424242;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .content {
+            flex: 1;
         }
         .nav {
             background-color: #37474f;
@@ -27,7 +33,7 @@
             text-decoration: none;
         }
         .nav a:hover {
-            color: #ff7043; /* Verander de kleur bij mouse over */
+            color: #ff7043;
         }
         .hero {
             background-color: #1de9b6;
@@ -82,6 +88,7 @@
             padding: 20px 10%;
             text-align: center;
             font-size: 14px;
+            margin-top: auto;
         }
         .footer a {
             font-family: 'Montserrat', sans-serif;
@@ -90,41 +97,57 @@
             text-decoration: none;
             margin: 0 10px;
         }
+        .lorem-content {
+            margin: 20px 10%;
+            line-height: 1.6;
+        }
     </style>
 </head>
 <body>
 
-    <div class="nav">
-        <a href="#">Home</a>
-        <a href="#">Over Ons</a>
-        <a href="#">Diensten</a>
-        <a href="#">Portfolio</a>
-        <a href="#">Referenties</a>
-        <a href="#">Contact</a>
-    </div>
-
-    <div class="hero">
-        <h1>Welkom bij Onze Cybersecurity Consultancy</h1>
-        <a href="#" class="cta">Neem Contact Op</a>
-    </div>
-
-    <div class="services">
-        <div class="service">
-            <div class="service-icon"></div>
-            <h2>Strategisch Consultancy</h2>
+    <div class="content">
+        <div class="nav">
+            <a href="#">Home</a>
+            <a href="#">Over Ons</a>
+            <a href="#">Diensten</a>
+            <a href="#">Portfolio</a>
+            <a href="#">Referenties</a>
+            <a href="#">Contact</a>
         </div>
-        <div class="service">
-            <div class="service-icon"></div>
-            <h2>Security Awareness</h2>
-        </div>
-        <div class="service">
-            <div class="service-icon"></div>
-            <h2>Architectuur & Verandering</h2>
-        </div>
-    </div>
 
-    <div class="testimonial">
-        <p>'Uitstekende service en expertise!'</p>
+        <div class="hero">
+            <h1>Welkom bij Onze Cybersecurity Consultancy</h1>
+            <a href="#" class="cta">Neem Contact Op</a>
+        </div>
+
+        <div class="lorem-content">
+            <h2>Onze Diensten</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa.</p>
+            <p>Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor.</p>
+            <p>Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh.</p>
+        </div>
+
+        <div class="services">
+            <div class="service">
+                <div class="service-icon"></div>
+                <h2>Strategisch Consultancy</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            <div class="service">
+                <div class="service-icon"></div>
+                <h2>Security Awareness</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            <div class="service">
+                <div class="service-icon"></div>
+                <h2>Architectuur & Verandering</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+        </div>
+
+        <div class="testimonial">
+            <p>'Uitstekende service en expertise!'</p>
+        </div>
     </div>
 
     <div class="footer">
